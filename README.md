@@ -16,24 +16,25 @@ to the directory where I have uarm.py sitting, then modify it by increasing the 
 
 I then run the following command in the terminal:
 
-python3 uarm.py /Users/pete/uarm/tmp.gcode /dev/tty.usbmodem1421
+`python3 uarm.py tmp.gcode /dev/tty.usbmodem1421`
 
 The /dev/tty.usbmodem1421 specifies the USB port. This will be different on different machines, and even more different on Windows or Linux.
 
-
+Note that this script will attempt to kill the uArm Studio application, since it cannot use the serial port when uArm Studio is using it. (uArm Studio sometimes hangs onto that serial port even after you quit the application.)
+ 
 I borrowed heavily from these two scripts found in the GRBL repository:
 
   https://github.com/grbl/grbl/blob/master/doc/script/stream.py
 
   https://github.com/grbl/grbl/blob/master/doc/script/simple_stream.py
-
   
+   
 You can read more about this here:
-
-  http://rasterweb.net/raster/2019/02/03/uarm-swift-pro-plotting/
-
   
-Pete Prodoehl
-pete@2xlnetworks.com
+  http://rasterweb.net/raster/2019/02/03/uarm-swift-pro-plotting/
+  
+  
+Pete Prodoehl 
+<pete@2xlnetworks.com>
 
 
